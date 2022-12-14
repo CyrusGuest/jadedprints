@@ -1,0 +1,28 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import dawnfm from '../images/posters/dawnfm.png'
+import graduation from '../images/posters/graduation.png'
+import midnights from '../images/posters/midnights.png'
+
+const ProductCard = ({ albumCode }) => {
+  const albumCatalog = { 0: { title: 'the weeknd - dawn fm', image: dawnfm, link: 'posters/0' },
+  1: { title: 'kanye west - graduation', image: graduation, link: 'posters/1' },
+  2: { title: 'taylor swift - midnights', image: midnights, link: 'posters/2' }
+  }
+
+  const album = albumCatalog[albumCode]
+
+  return (
+    <div className='w-5/6 shadow-xl rounded-xl p-8 mx-auto'>
+      <h3 className='text-xl font-bold text-center'>{album.title}</h3>
+      <img className='shadow-xl' src={album.image} alt="" />
+      <h2 className='text-center text-2xl font-light mt-3'>$23.99 + free shipping</h2>
+
+      <button className='w-full bg-black text-white text-2xl font-bold p-3 rounded-lg mt-3'><Link to={album.link}>view poster</Link></button>
+
+      <p className='text-center font-light mt-2'>tax not included</p>
+    </div>
+  )
+}
+
+export default ProductCard
