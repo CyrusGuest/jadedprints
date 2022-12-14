@@ -16,7 +16,7 @@ const AlbumRequest = () => {
           <input className='w-full ml-3 outline-none' placeholder='enter album and artist' type="text" />
         </div>
 
-        <button className='h-16 md:w-2/6 font-bold bg-black text-white text-xl p-4 rounded-lg w-5/6 mx-auto mt-3 md:mt-0'>send request</button>
+        <button className='h-16 md:w-2/6 font-bold bg-black text-white text-xl lg:text-xl md:text-base p-4 rounded-lg w-5/6 mx-auto mt-3 md:mt-0'>send request</button>
       </div>
     </div>
   )
