@@ -15,7 +15,7 @@ const Search = () => {
     for (let i = 0; i < AlbumCatalog.length; i++) {
       if (AlbumCatalog[i].title.includes(query.toLowerCase())) setPosters([...posters, AlbumCatalog[i]])
     }
-  }, [query])
+  }, [query, posters])
 
 
 
