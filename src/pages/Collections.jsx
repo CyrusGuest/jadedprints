@@ -6,8 +6,8 @@ const Collections = () => {
   return (
     <div>
       <div className='flex flex-col w-10/12 mx-auto'>
-        <h1 className='md:max-w-4xl md:mx-auto md:text-5xl text-4xl mt-10 font-bold text-center mx-4'>the weeknd collection</h1>
-        <p className='md:text-xl text-center mx-14 mt-4'>we love the weeknd just as much as you do - so we made him a collection.</p>
+        <h1 className='md:max-w-4xl md:mx-auto md:text-5xl text-4xl mt-10 font-bold text-center'>the weeknd collection</h1>
+        <p className='md:text-xl text-center mx- mt-4'>we love the weeknd just as much as you do - so we made him a collection.</p>
       
         <div className='flex flex-col gap-16 md:gap-8 md:grid md:grid-cols-3 mt-10'>
           <ProductCard albumCode={0} />

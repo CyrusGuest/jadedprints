@@ -14,21 +14,21 @@ const Footer = () => {
         <div className='flex flex-col'>
           <h3 className='font-bold text-2xl'>collections</h3>
           <ul className='text-xl flex flex-col'>
-            <Link>the weeknd</Link>
-            <Link>newly added</Link>
-            <Link>most popular</Link>
-            <Link>on sale</Link>
-            <Link>all posters</Link>
+            <Link to="/collections" >the weeknd</Link>
+            <Link to="/collections" >newly added</Link>
+            <Link to="/collections" >most popular</Link>
+            <Link to="/collections" >on sale</Link>
+            <Link to="/posters" >all posters</Link>
           </ul>
         </div>
 
         <div className='flex flex-col'>
           <h3 className='font-bold text-2xl'>company</h3>
           <ul className='text-xl flex flex-col'>
-            <Link>about us</Link>
-            <Link>policy</Link>
-            <Link>request an album</Link>
-            <Link>contact us</Link>
+            <Link to="/company" >about us</Link>
+            <Link to="/company" >policy</Link>
+            <Link to="/company" >request an album</Link>
+            <Link to="/company" >contact us</Link>
           </ul>
         </div>
       </div>

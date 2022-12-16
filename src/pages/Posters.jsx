@@ -2,6 +2,7 @@ import React from 'react'
 import AlbumRequest from '../components/AlbumRequest'
 import PosterSearch from '../components/PosterSearch'
 import ProductCard from '../components/ProductCard'
+import AlbumCatalog from '../AlbumCatalog'
 
 const Posters = () => {
   return (
@@ -13,14 +14,8 @@ const Posters = () => {
 
       <div className='mx-10 mt-10 flex flex-col'>
         <div className='flex flex-col gap-12 md:grid md:grid-cols-3'>
-          <ProductCard albumCode={0} />
-          <ProductCard albumCode={1} />
-          <ProductCard albumCode={2} />
-          <ProductCard albumCode={0} />
-          <ProductCard albumCode={1} />
-          <ProductCard albumCode={2} /> 
+          { AlbumCatalog.map(poster => <ProductCard albumCode={poster.id} />) }
         </div>
-        <button className='p-4 mt-10 max-w-md font-bold text-xl bg-black text-white w-full rounded-lg mx-auto'>load more posters</button>
       </div>
 
       <AlbumRequest />
