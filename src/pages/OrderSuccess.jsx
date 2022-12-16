@@ -9,7 +9,7 @@ const OrderSuccess = () => {
     setCart([]);
 
     localStorage.setItem('cart', JSON.stringify(cart));
-  }, [])
+  }, [cart, setCart])
 
   return (
     <div>

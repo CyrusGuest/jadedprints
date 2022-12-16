@@ -9,7 +9,7 @@ const AlbumRequest = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await axios.post('http://134.122.24.218/album-requests', { albumRequest })
+    await axios.post('http://134.122.24.218/album-requests', { albumRequest })
 
     setRequestSent(true);
     setAlbumRequest('');

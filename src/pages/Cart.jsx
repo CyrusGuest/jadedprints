@@ -5,7 +5,7 @@ import Checkout from '../images/Checkout.svg'
 import axios from 'axios'
 
 const Cart = () => {
-  const { cart, setCart } = useContext(CartContext)
+  const { cart } = useContext(CartContext)
 
   const handleCheckout = async () => {
     const response = await axios.post('http://134.122.24.218/create-checkout-session', cart);
