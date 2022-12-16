@@ -8,7 +8,7 @@ const Cart = () => {
   const { cart } = useContext(CartContext)
 
   const handleCheckout = async () => {
-    const response = await axios.post('https://142.93.48.107/create-checkout-session', cart);
+    const response = await axios.post('https://142.93.48.107:4242/create-checkout-session', cart);
   
     const redirectURL = response.data;
 
