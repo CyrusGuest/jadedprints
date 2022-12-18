@@ -20,7 +20,7 @@ const Home = () => {
           <div className='flex flex-col md:mt-2'>
             <p className='mt-2 font-light ml-4'>"Jaded Prints have masterfully designed posters by real 
               industry-professionals. The posters they sell are high-quality 
-              both in physical quality and design.
+              both in physical quality and design."
             </p>
             <h3 className='ml-4 mt-2 font-bold'>Mina Hadsworth</h3>
             <h3 className='ml-4 pb-2'>Graphic Designer, Plainworks</h3>
