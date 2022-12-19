@@ -15,7 +15,7 @@ const Search = () => {
     for (let i = 0; i < AlbumCatalog.length; i++) {
       const currentAlbum = AlbumCatalog[i];
       
-      if (currentAlbum.title.includes(query)) {
+      if (currentAlbum.title.includes(query.toLowerCase())) {
         newPosters.push(currentAlbum);
       };
     }
