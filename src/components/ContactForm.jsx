@@ -21,7 +21,7 @@ const ContactForm = () => {
 
       <div className='flex relative border-2 w-2/3 max-w-lg rounded-lg pl-2 py-3 mt-4 mx-auto'>
         <img className='absolute' src={Paragraph} alt="" />
-        <textarea className='bg-transparent ml-12 text-xl outline-none' placeholder='message' type="textarea" name="message" id="message" />
+        <textarea className='w-full bg-transparent ml-12 mr-3 text-xl outline-none' placeholder='message' type="textarea" name="message" id="message" />
       </div>
 
       <button className='bg-black rounded-lg mt-4 text-white text-xl py-4 font-bold w-2/3 max-w-sm mx-auto'>send message</button>

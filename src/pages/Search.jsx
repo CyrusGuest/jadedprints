@@ -10,14 +10,18 @@ const Search = () => {
   const [posters, setPosters] = useState([])
 
   useEffect(() => {
-    setPosters([])
+    let newPosters = []
 
     for (let i = 0; i < AlbumCatalog.length; i++) {
-      if (AlbumCatalog[i].title.includes(query.toLowerCase())) setPosters([...posters, AlbumCatalog[i]])
+      const currentAlbum = AlbumCatalog[i];
+      
+      if (currentAlbum.title.includes(query)) {
+        newPosters.push(currentAlbum);
+      };
     }
-  }, [query, posters])
 
-
+    setPosters(newPosters)
+  }, [query]);
 
   return (
     <div className='mx-6'>

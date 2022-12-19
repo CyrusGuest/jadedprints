@@ -22,6 +22,9 @@ const CartProduct = ({ poster }) => {
   }
 
   const saveDetails = () => {
+    if (typeof quantity !== 'number') return alert('quantity has to be a number');
+    if (quantity < 1) return alert('quantity cannot be less than 1');
+
     let newCart = cart;
 
     newCart = newCart.filter( item => item !== poster)
@@ -55,7 +58,7 @@ const CartProduct = ({ poster }) => {
       
       <div className='mt-4'>
         <h3 className='text-2xl font-light'>quantity</h3>
-        <input required value={quantity} onChange={(e) => setQuantity(e.target.value)} className='border border-black outline-none p-1 w-1/2 rounded-md' placeholder='1' type="number" name="quantity" id="quantity" />
+        <input required value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} className='border border-black outline-none p-1 w-1/2 rounded-md' placeholder='1' type="number" name="quantity" id="quantity" />
       </div>
 
       <button onClick={saveDetails} className='w-full bg-black text-white text-2xl lg:text-2xl lg:p-3  font-bold p-3 rounded-lg mt-3'>save details</button>

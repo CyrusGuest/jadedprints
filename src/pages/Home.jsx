@@ -13,8 +13,9 @@ const Home = () => {
 
       <PosterSearch />
 
+
       <div className='mx-auto w-3/4 md:relative'>
-        <img className='z-0 w-3/4 max-w-3xl md:float-right mt-20' src={DesignSS} alt="" />
+        <img className='z-0 w-3/4 max-w-4xl md:float-right mt-20' src={DesignSS} alt="" />
         <div className='z-10 w-8/12 md:max-w-md md:flex bg-white shadow-lg rounded-lg pt-6 md:pt-0 md:left-10 md:top-32 absolute left-20 top-[700px]'>
           <img className='mx-auto w-14 md:w-full rounded-full md:rounded-none' src={Reviewer} alt="" />
           <div className='flex flex-col md:mt-2'>
@@ -33,9 +34,9 @@ const Home = () => {
         <p className='text-center mb-10 mx-10 md:text-xl'>new and popular posters our customers <span>love</span> the most.</p>
       
         <div className="flex flex-col gap-10 md:flex-row mx-8">
-          <ProductCard albumCode={0} />
-          <ProductCard albumCode={1} />
           <ProductCard albumCode={2} />
+          <ProductCard albumCode={4} />
+          <ProductCard albumCode={15} />
         </div>
 
       </div>
