@@ -19,7 +19,7 @@ const Collections = () => {
         <p className='md:text-xl text-center mx-14 mt-4'>our newly added posters from the most recent releases.</p>
       
         <div className='flex flex-col gap-16 md:grid md:grid-cols-3 mt-10'>
-          <ProductCard albumCode={18} />
+          <ProductCard albumCode={20} />
           <ProductCard albumCode={9} />
           <ProductCard albumCode={11} />
         </div>

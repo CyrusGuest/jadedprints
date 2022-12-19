@@ -34,8 +34,8 @@ const Home = () => {
         <p className='text-center mb-10 mx-10 md:text-xl'>new and popular posters our customers <span>love</span> the most.</p>
       
         <div className="flex flex-col gap-10 md:flex-row mx-8">
+          <ProductCard albumCode={20} />
           <ProductCard albumCode={2} />
-          <ProductCard albumCode={4} />
           <ProductCard albumCode={15} />
         </div>
 
