@@ -82,6 +82,10 @@ import sos12x18 from './images/posters/sos/12x18 Poster.png'
 import sos16x20 from './images/posters/sos/16x20 Poster.png'
 import sos20x30 from './images/posters/sos/20x30 Poster.png'
 import sos11x14 from './images/posters/sos/11x14 Poster.png'
+import hav12x18 from './images/posters/heroes and villains/12x18 Poster.png'
+import hav16x20 from './images/posters/heroes and villains/16x20 Poster.png'
+import hav20x30 from './images/posters/heroes and villains/20x30 Poster.png'
+import hav11x14 from './images/posters/heroes and villains/11x14 Poster.png'
 
 const AlbumCatalog = [
   { id: 0, title: 'the weeknd - dawn fm', images: { '11x14': dawnfm11x14, '12x18': dawnfm12x18, '16x20': dawnfm16x20, '20x30': dawnfm20x30 }, link: '/posters/0' },
@@ -105,6 +109,7 @@ const AlbumCatalog = [
   { id: 18, title: 'the backseat lovers - waiting to spill', images: { '11x14': waitingtospill11x14, '12x18': waitingtospill12x18, '16x20': waitingtospill16x20, '20x30': waitingtospill20x30 }, link: '/posters/18' },
   { id: 19, title: 'brent faiyaz - wasteland', images: { '11x14': wasteland11x14, '12x18': wasteland12x18, '16x20': wasteland16x20, '20x30': wasteland20x30 }, link: '/posters/19' },
   { id: 20, title: 'sza - sos', images: { '11x14': sos11x14, '12x18': sos12x18, '16x20': sos16x20, '20x30': sos20x30 }, link: '/posters/20' },
+  { id: 21, title: 'metro boomin - heroes & villains', images: { '11x14': hav11x14, '12x18': hav12x18, '16x20': hav16x20, '20x30': hav20x30 }, link: '/posters/21' },
 ]
 
 export default AlbumCatalog

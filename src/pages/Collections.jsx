@@ -20,7 +20,7 @@ const Collections = () => {
       
         <div className='flex flex-col gap-16 md:grid md:grid-cols-3 mt-10'>
           <ProductCard albumCode={20} />
-          <ProductCard albumCode={9} />
+          <ProductCard albumCode={21} />
           <ProductCard albumCode={11} />
         </div>
       </div>
