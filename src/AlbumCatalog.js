@@ -86,52 +86,30 @@ import hav12x18 from './images/posters/heroes and villains/12x18 Poster.webp'
 import hav16x20 from './images/posters/heroes and villains/16x20 Poster.webp'
 import hav20x30 from './images/posters/heroes and villains/20x30 Poster.webp'
 import hav11x14 from './images/posters/heroes and villains/11x14 Poster.webp'
-import dawnfmthumbnail from './images/thumbnails/dawnfm.webp'
-import graduationthumbnail from './images/thumbnails/graduation.webp'
-import midnightsthumbnail from './images/thumbnails/midnights.webp'
-import seventeenthumbnail from './images/thumbnails/seventeen.webp'
-import foresthillsthumbnail from './images/thumbnails/foresthills.webp'
-import bbtmthumbnail from './images/thumbnails/bbtm.webp'
-import bandbthumbnail from './images/thumbnails/bandb.webp'
-import blondethumbnail from './images/thumbnails/blonde.webp'
-import casthumbnail from './images/thumbnails/cas.webp'
-import dldtthumbnail from './images/thumbnails/darklane.webp'
-import aloneatpromthumbnail from './images/thumbnails/aloneatprom.webp'
-import harryshousethumbnail from './images/thumbnails/harryshouse.webp'
-import hobthumbnail from './images/thumbnails/houseofballoons.webp'
-import iamiwasthumbnail from './images/thumbnails/iamiwas.webp'
-import mrmoralethumbnail from './images/thumbnails/mrmorale.webp'
-import takecarethumbnail from './images/thumbnails/takecare.webp'
-import offseasonthumbnail from './images/thumbnails/offseason.webp'
-import viewsthumbnail from './images/thumbnails/views.webp'
-import waitingtospillthumbnail from './images/thumbnails/waitingtospill.webp'
-import wastelandthumbnail from './images/thumbnails/wasteland.webp'
-import sosthumbnail from './images/thumbnails/sos.webp'
-import heroesandvillainsthumbnail from './images/thumbnails/heroesandvillains.webp'
 
 const AlbumCatalog = [
-  { id: 0, title: 'the weeknd - dawn fm', images: { thumbnail: dawnfmthumbnail, '11x14': dawnfm11x14, '12x18': dawnfm12x18, '16x20': dawnfm16x20, '20x30': dawnfm20x30 }, link: '/posters/0' },
-  { id: 1, title: 'kanye west - graduation', images: { thumbnail: graduationthumbnail, '11x14': graduation11x14, '12x18': graduation12x18, '16x20': graduation16x20, '20x30': graduation20x30 }, link: '/posters/1' },
-  { id: 2, title: 'taylor swift - midnights', images: { thumbnail: midnightsthumbnail, '11x14': midnights11x14, '12x18': midnights12x18, '16x20': midnights16x20, '20x30': midnights20x30 }, link: '/posters/2' },
-  { id: 3, title: 'xxxtentacion - 17', images: { thumbnail: seventeenthumbnail, '11x14': seventeen11x14, '12x18': seventeen12x18, '16x20': seventeen16x20, '20x30': seventeen20x30 }, link: '/posters/3' },
-  { id: 4, title: 'j cole - 2014 forest hills drive', images: { thumbnail: foresthillsthumbnail, '11x14': fhd11x14, '12x18': fhd12x18, '16x20': fhd16x20, '20x30': fhd20x30 }, link: '/posters/4' },
-  { id: 5, title: 'the weeknd - beauty behind the madness', images: { thumbnail: bbtmthumbnail, '11x14': bbtm11x14, '12x18': bbtm12x18, '16x20': bbtm16x20, '20x30': bbtm20x30 }, link: '/posters/5' },
-  { id: 6, title: 'post malone - beerbongs & bentleys', images: { thumbnail: bandbthumbnail, '11x14': bandb11x14, '12x18': bandb12x18, '16x20': bandb16x20, '20x30': bandb20x30 }, link: '/posters/6' },
-  { id: 7, title: 'frank ocean - blonde', images: { thumbnail: blondethumbnail, '11x14': blonde11x14, '12x18': blonde12x18, '16x20': blonde16x20, '20x30': blonde20x30 }, link: '/posters/7' },
-  { id: 8, title: 'cas - cigarettes after sex', images: { thumbnail: casthumbnail, '11x14': cas11x14, '12x18': cas12x18, '16x20': cas16x20, '20x30': cas20x30 }, link: '/posters/8' },
-  { id: 9, title: 'drake - dark lane demo tapes', images: { thumbnail: dldtthumbnail, '11x14': dldt11x14, '12x18': dldt12x18, '16x20': dldt16x20, '20x30': dldt20x30 }, link: '/posters/9' },
-  { id: 10, title: 'tory lanez - alone at prom', images: { thumbnail: aloneatpromthumbnail, '11x14': aloneatprom11x14, '12x18': aloneatprom12x18, '16x20': aloneatprom16x20, '20x30': aloneatprom20x30 }, link: '/posters/10' },
-  { id: 11, title: "harry styles - harry's house", images: { thumbnail: harryshousethumbnail, '11x14': harryshouse11x14, '12x18': harryshouse12x18, '16x20': harryshouse16x20, '20x30': harryshouse20x30 }, link: '/posters/11' },
-  { id: 12, title: 'the weeknd - house of balloons', images: { thumbnail: hobthumbnail, '11x14': hob11x14, '12x18': hob12x18, '16x20': hob16x20, '20x30': hob20x30 }, link: '/posters/12' },
-  { id: 13, title: '21 savage - i am > i was', images: { thumbnail: iamiwasthumbnail, '11x14': iamiwas11x14, '12x18': iamiwas12x18, '16x20': iamiwas16x20, '20x30': iamiwas20x30 }, link: '/posters/13' },
-  { id: 14, title: 'kendrick lamar - mr. morale & the big steppers', images: { thumbnail: mrmoralethumbnail, '11x14': mrmorale11x14, '12x18': mrmorale12x18, '16x20': mrmorale16x20, '20x30': mrmorale20x30 }, link: '/posters/14' },
-  { id: 15, title: 'drake - take care', images: { thumbnail: takecarethumbnail, '11x14': takecare11x14, '12x18': takecare12x18, '16x20': takecare16x20, '20x30': takecare20x30 }, link: '/posters/15' },
-  { id: 16, title: 'j cole - the off-season', images: { thumbnail: offseasonthumbnail, '11x14': offseason11x14, '12x18': offseason12x18, '16x20': offseason16x20, '20x30': offseason20x30 }, link: '/posters/16' },
-  { id: 17, title: 'drake - views', images: { thumbnail: viewsthumbnail, '11x14': views11x14, '12x18': views12x18, '16x20': views16x20, '20x30': views20x30 }, link: '/posters/17' },
-  { id: 18, title: 'the backseat lovers - waiting to spill', images: { thumbnail: waitingtospillthumbnail, '11x14': waitingtospill11x14, '12x18': waitingtospill12x18, '16x20': waitingtospill16x20, '20x30': waitingtospill20x30 }, link: '/posters/18' },
-  { id: 19, title: 'brent faiyaz - wasteland', images: { thumbnail: wastelandthumbnail, '11x14': wasteland11x14, '12x18': wasteland12x18, '16x20': wasteland16x20, '20x30': wasteland20x30 }, link: '/posters/19' },
-  { id: 20, title: 'sza - sos', images: { thumbnail: sosthumbnail, '11x14': sos11x14, '12x18': sos12x18, '16x20': sos16x20, '20x30': sos20x30 }, link: '/posters/20' },
-  { id: 21, title: 'metro boomin - heroes & villains', images: { thumbnail: heroesandvillainsthumbnail, '11x14': hav11x14, '12x18': hav12x18, '16x20': hav16x20, '20x30': hav20x30 }, link: '/posters/21' },
+  { id: 0, title: 'the weeknd - dawn fm', images: { '11x14': dawnfm11x14, '12x18': dawnfm12x18, '16x20': dawnfm16x20, '20x30': dawnfm20x30 }, link: '/posters/0' },
+  { id: 1, title: 'kanye west - graduation', images: { '11x14': graduation11x14, '12x18': graduation12x18, '16x20': graduation16x20, '20x30': graduation20x30 }, link: '/posters/1' },
+  { id: 2, title: 'taylor swift - midnights', images: { '11x14': midnights11x14, '12x18': midnights12x18, '16x20': midnights16x20, '20x30': midnights20x30 }, link: '/posters/2' },
+  { id: 3, title: 'xxxtentacion - 17', images: { '11x14': seventeen11x14, '12x18': seventeen12x18, '16x20': seventeen16x20, '20x30': seventeen20x30 }, link: '/posters/3' },
+  { id: 4, title: 'j cole - 2014 forest hills drive', images: { '11x14': fhd11x14, '12x18': fhd12x18, '16x20': fhd16x20, '20x30': fhd20x30 }, link: '/posters/4' },
+  { id: 5, title: 'the weeknd - beauty behind the madness', images: { '11x14': bbtm11x14, '12x18': bbtm12x18, '16x20': bbtm16x20, '20x30': bbtm20x30 }, link: '/posters/5' },
+  { id: 6, title: 'post malone - beerbongs & bentleys', images: { '11x14': bandb11x14, '12x18': bandb12x18, '16x20': bandb16x20, '20x30': bandb20x30 }, link: '/posters/6' },
+  { id: 7, title: 'frank ocean - blonde', images: { '11x14': blonde11x14, '12x18': blonde12x18, '16x20': blonde16x20, '20x30': blonde20x30 }, link: '/posters/7' },
+  { id: 8, title: 'cas - cigarettes after sex', images: { '11x14': cas11x14, '12x18': cas12x18, '16x20': cas16x20, '20x30': cas20x30 }, link: '/posters/8' },
+  { id: 9, title: 'drake - dark lane demo tapes', images: { '11x14': dldt11x14, '12x18': dldt12x18, '16x20': dldt16x20, '20x30': dldt20x30 }, link: '/posters/9' },
+  { id: 10, title: 'tory lanez - alone at prom', images: { '11x14': aloneatprom11x14, '12x18': aloneatprom12x18, '16x20': aloneatprom16x20, '20x30': aloneatprom20x30 }, link: '/posters/10' },
+  { id: 11, title: "harry styles - harry's house", images: { '11x14': harryshouse11x14, '12x18': harryshouse12x18, '16x20': harryshouse16x20, '20x30': harryshouse20x30 }, link: '/posters/11' },
+  { id: 12, title: 'the weeknd - house of balloons', images: { '11x14': hob11x14, '12x18': hob12x18, '16x20': hob16x20, '20x30': hob20x30 }, link: '/posters/12' },
+  { id: 13, title: '21 savage - i am > i was', images: { '11x14': iamiwas11x14, '12x18': iamiwas12x18, '16x20': iamiwas16x20, '20x30': iamiwas20x30 }, link: '/posters/13' },
+  { id: 14, title: 'kendrick lamar - mr. morale & the big steppers', images: { '11x14': mrmorale11x14, '12x18': mrmorale12x18, '16x20': mrmorale16x20, '20x30': mrmorale20x30 }, link: '/posters/14' },
+  { id: 15, title: 'drake - take care', images: { '11x14': takecare11x14, '12x18': takecare12x18, '16x20': takecare16x20, '20x30': takecare20x30 }, link: '/posters/15' },
+  { id: 16, title: 'j cole - the off-season', images: { '11x14': offseason11x14, '12x18': offseason12x18, '16x20': offseason16x20, '20x30': offseason20x30 }, link: '/posters/16' },
+  { id: 17, title: 'drake - views', images: { '11x14': views11x14, '12x18': views12x18, '16x20': views16x20, '20x30': views20x30 }, link: '/posters/17' },
+  { id: 18, title: 'the backseat lovers - waiting to spill', images: { '11x14': waitingtospill11x14, '12x18': waitingtospill12x18, '16x20': waitingtospill16x20, '20x30': waitingtospill20x30 }, link: '/posters/18' },
+  { id: 19, title: 'brent faiyaz - wasteland', images: { '11x14': wasteland11x14, '12x18': wasteland12x18, '16x20': wasteland16x20, '20x30': wasteland20x30 }, link: '/posters/19' },
+  { id: 20, title: 'sza - sos', images: { '11x14': sos11x14, '12x18': sos12x18, '16x20': sos16x20, '20x30': sos20x30 }, link: '/posters/20' },
+  { id: 21, title: 'metro boomin - heroes & villains', images: { '11x14': hav11x14, '12x18': hav12x18, '16x20': hav16x20, '20x30': hav20x30 }, link: '/posters/21' },
 ]
 
 export default AlbumCatalog
