@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Logo from '../images/Logo.png'
+import Logo from '../images/Logo.webp'
 import Bag from '../images/Bag.svg'
 import HamburgerMenu from '../images/HamburgerMenu.svg'
 import MobileNav from './MobileNav'

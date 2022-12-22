@@ -2,8 +2,8 @@ import React from 'react'
 import PosterSearch from '../components/PosterSearch'
 import ProductCard from '../components/ProductCard'
 import AlbumRequest from '../components/AlbumRequest'
-import DesignSS from '../images/Design.png'
-import Reviewer from '../images/Reviewer.png'
+import DesignSS from '../images/Design.webp'
+import Reviewer from '../images/Reviewer.webp'
 
 const Home = () => {
   return (
