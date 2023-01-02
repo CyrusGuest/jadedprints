@@ -1,27 +1,24 @@
-import React, { useMemo, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Posters from './pages/Posters';
-import Company from './pages/Company';
-import Collections from './pages/Collections';
-import Cart from './pages/Cart';
-import PosterView from './pages/PosterView';
-import Search from './pages/Search'
-import NoMatch from './pages/NoMatch';
-import CartContext from './context/CartContext';
-import OrderSuccess from './pages/OrderSuccess';
+import React, { useMemo, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Posters from "./pages/Posters";
+import Company from "./pages/Company";
+import Collections from "./pages/Collections";
+import Cart from "./pages/Cart";
+import PosterView from "./pages/PosterView";
+import Search from "./pages/Search";
+import NoMatch from "./pages/NoMatch";
+import CartContext from "./context/CartContext";
+import OrderSuccess from "./pages/OrderSuccess";
 
 function App() {
-  const localCartJSON = localStorage.getItem('cart');
-  const localCart = JSON.parse(localCartJSON)
+  const localCartJSON = localStorage.getItem("cart");
+  const localCart = JSON.parse(localCartJSON);
 
-  const [cart, setCart] = useState(localCart ? localCart : [])
+  const [cart, setCart] = useState(localCart ? localCart : []);
 
-  const value = useMemo(
-    () => ({ cart, setCart }),
-    [cart]
-  );
+  const value = useMemo(() => ({ cart, setCart }), [cart]);
 
   return (
     <div>
@@ -40,7 +37,6 @@ function App() {
           </Route>
         </Routes>
       </CartContext.Provider>
-
     </div>
   );
 }
