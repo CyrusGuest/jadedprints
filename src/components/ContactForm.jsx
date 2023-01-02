@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import EmailIcon from "../images/EmailIcon.svg";
 import Subject from "../images/Subject.svg";
 import Paragraph from "../images/Paragraph.svg";
+import axios from "axios";
 
 const ContactForm = () => {
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const validEmail = new RegExp(
+    "^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$"
+  );
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!validEmail.test(email)) {
+      setEmail("");
+      alert("please enter a valid email address");
+      return;
+    }
+
+    await axios.post("https://api.jadedprints.com/contact", { email, subject, message });
+
+    setSubmitted(true);
+  }
+
+  if (submitted) return (
+    <h3 className="text-xl font-light">we got your message!</h3>
+  )
+
   return (
     <div className="flex flex-col">
       <h1 className="md:max-w-4xl md:mx-auto md:text-5xl text-4xl mt-32 font-bold text-center mx-4">
@@ -22,6 +50,8 @@ const ContactForm = () => {
           type="email"
           name="email"
           id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
 
@@ -33,6 +63,8 @@ const ContactForm = () => {
           type="text"
           name="subject"
           id="subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
         />
       </div>
 
@@ -44,10 +76,12 @@ const ContactForm = () => {
           type="textarea"
           name="message"
           id="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
       </div>
 
-      <button className="bg-black rounded-lg mt-4 text-white text-xl py-4 font-bold w-2/3 max-w-sm mx-auto">
+      <button onClick={e => handleSubmit(e)} className="bg-black rounded-lg mt-4 text-white text-xl py-4 font-bold w-2/3 max-w-sm mx-auto">
         send message
       </button>
     </div>
