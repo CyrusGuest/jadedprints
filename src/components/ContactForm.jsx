@@ -29,8 +29,8 @@ const ContactForm = () => {
   }
 
   if (submitted) return (
-    <div className="flex flex-col">
-      <h3 className="mx-auto text-3xl">we got your message!</h3>
+    <div className="flex flex-col mt-32">
+      <h3 className="mx-auto text-3xl font-bold">we got your message!</h3>
     </div>
   )
 
