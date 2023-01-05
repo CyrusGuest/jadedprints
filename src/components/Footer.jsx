@@ -86,7 +86,7 @@ const Footer = () => {
         <h3 className="font-bold text-2xl">socials</h3>
         <div className="flex gap-6 mt-2 md:gap-2">
           <img className="w-10" src={Pinterest} alt="" />
-          <img src={Instagram} alt="" />
+          <img src={Instagram} alt="https://www.instagram.com/jadedprints/" />
           <img src={Twitter} alt="" />
           <img src={Tiktok} alt="" />
         </div>
