@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PosterSearch from "../components/PosterSearch";
 import ProductCard from "../components/ProductCard";
 import AlbumRequest from "../components/AlbumRequest";
@@ -17,6 +18,9 @@ const Home = () => {
       </p>
 
       <PosterSearch />
+      <h3 className="text-center mt-4 text-xl underline cursor-pointer font-light">
+        <Link to="posters">or view all our posters here</Link>
+      </h3>
 
       <div className="mx-auto w-3/4 md:relative">
         <img
@@ -42,7 +46,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-96 md:mt-40">
+      <div className="mt-72 md:mt-40">
         <h1 className="text-center text-4xl md:text-5xl font-bold mx-10">
           our best sellers
         </h1>
