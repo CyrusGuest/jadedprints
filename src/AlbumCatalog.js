@@ -98,6 +98,10 @@ import tdf12x18 from "./images/posters/the divine feminine/12x18 Poster.webp";
 import tdf16x20 from "./images/posters/the divine feminine/16x20 Poster.webp";
 import tdf20x30 from "./images/posters/the divine feminine/20x30 Poster.webp";
 import tdf11x14 from "./images/posters/the divine feminine/11x14 Poster.webp";
+import reputation12x18 from "./images/posters/reputation/12x18 Poster.webp";
+import reputation16x20 from "./images/posters/reputation/16x20 Poster.webp";
+import reputation20x30 from "./images/posters/reputation/20x30 Poster.webp";
+import reputation11x14 from "./images/posters/reputation/11x14 Poster.webp";
 
 const AlbumCatalog = [
   {
@@ -374,6 +378,17 @@ const AlbumCatalog = [
       "20x30": tdf20x30,
     },
     link: "/posters/24",
+  },
+  {
+    id: 25,
+    title: "taylor swift - reputation",
+    images: {
+      "11x14": reputation11x14,
+      "12x18": reputation12x18,
+      "16x20": reputation16x20,
+      "20x30": reputation20x30,
+    },
+    link: "/posters/25",
   },
 ];
 
