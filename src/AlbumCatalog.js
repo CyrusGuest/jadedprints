@@ -86,6 +86,10 @@ import hav12x18 from "./images/posters/heroes and villains/12x18 Poster.webp";
 import hav16x20 from "./images/posters/heroes and villains/16x20 Poster.webp";
 import hav20x30 from "./images/posters/heroes and villains/20x30 Poster.webp";
 import hav11x14 from "./images/posters/heroes and villains/11x14 Poster.webp";
+import comedownmachine12x18 from "./images/posters/comedown machine/12x18 Poster.webp";
+import comedownmachine16x20 from "./images/posters/comedown machine/16x20 Poster.webp";
+import comedownmachine20x30 from "./images/posters/comedown machine/20x30 Poster.webp";
+import comedownmachine11x14 from "./images/posters/comedown machine/11x14 Poster.webp";
 
 const AlbumCatalog = [
   {
@@ -329,6 +333,17 @@ const AlbumCatalog = [
       "20x30": hav20x30,
     },
     link: "/posters/21",
+  },
+  {
+    id: 22,
+    title: "the strokes - comedown machine",
+    images: {
+      "11x14": comedownmachine11x14,
+      "12x18": comedownmachine12x18,
+      "16x20": comedownmachine16x20,
+      "20x30": comedownmachine20x30,
+    },
+    link: "/posters/22",
   },
 ];
 
