@@ -90,6 +90,10 @@ import comedownmachine12x18 from "./images/posters/comedown machine/12x18 Poster
 import comedownmachine16x20 from "./images/posters/comedown machine/16x20 Poster.webp";
 import comedownmachine20x30 from "./images/posters/comedown machine/20x30 Poster.webp";
 import comedownmachine11x14 from "./images/posters/comedown machine/11x14 Poster.webp";
+import speaknow12x18 from "./images/posters/speak now/12x18 Poster.webp";
+import speaknow16x20 from "./images/posters/speak now/16x20 Poster.webp";
+import speaknow20x30 from "./images/posters/speak now/20x30 Poster.webp";
+import speaknow11x14 from "./images/posters/speak now/11x14 Poster.webp";
 
 const AlbumCatalog = [
   {
@@ -344,6 +348,17 @@ const AlbumCatalog = [
       "20x30": comedownmachine20x30,
     },
     link: "/posters/22",
+  },
+  {
+    id: 23,
+    title: "taylor swift - speak now",
+    images: {
+      "11x14": speaknow11x14,
+      "12x18": speaknow12x18,
+      "16x20": speaknow16x20,
+      "20x30": speaknow20x30,
+    },
+    link: "/posters/23",
   },
 ];
 
