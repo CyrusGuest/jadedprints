@@ -94,6 +94,10 @@ import speaknow12x18 from "./images/posters/speak now/12x18 Poster.webp";
 import speaknow16x20 from "./images/posters/speak now/16x20 Poster.webp";
 import speaknow20x30 from "./images/posters/speak now/20x30 Poster.webp";
 import speaknow11x14 from "./images/posters/speak now/11x14 Poster.webp";
+import tdf12x18 from "./images/posters/the divine feminine/12x18 Poster.webp";
+import tdf16x20 from "./images/posters/the divine feminine/16x20 Poster.webp";
+import tdf20x30 from "./images/posters/the divine feminine/20x30 Poster.webp";
+import tdf11x14 from "./images/posters/the divine feminine/11x14 Poster.webp";
 
 const AlbumCatalog = [
   {
@@ -359,6 +363,17 @@ const AlbumCatalog = [
       "20x30": speaknow20x30,
     },
     link: "/posters/23",
+  },
+  {
+    id: 24,
+    title: "mac miller - the divine feminine",
+    images: {
+      "11x14": tdf11x14,
+      "12x18": tdf12x18,
+      "16x20": tdf16x20,
+      "20x30": tdf20x30,
+    },
+    link: "/posters/24",
   },
 ];
 
