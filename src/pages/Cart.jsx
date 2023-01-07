@@ -11,7 +11,7 @@ const Cart = () => {
   const handleCheckout = async () => {
     const endpoint = "https://api.jadedprints.com/create-checkout-session";
 
-    gtag("get", "348445266", "client_id", async (clientID) => {
+    gtag("get", "G-TTHC5CSW66", "client_id", async (clientID) => {
       const response = await axios.post(endpoint, {
         cart,
         analyticsClientID: clientID,
