@@ -3,6 +3,7 @@ import CartProduct from "../components/CartProduct";
 import CartContext from "../context/CartContext";
 import Checkout from "../images/Checkout.svg";
 import axios from "axios";
+import gtag from "ga-gtag";
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
@@ -10,11 +11,20 @@ const Cart = () => {
   const handleCheckout = async () => {
     const endpoint = "https://api.jadedprints.com/create-checkout-session";
 
-    const response = await axios.post(endpoint, cart);
+    gtag("get", "348445266", "client_id", async (clientID) => {
+      const response = await axios.post(endpoint, {
+        cart,
+        analyticsClientID: clientID,
+      });
 
-    const redirectURL = response.data;
+      const redirectURL = response.data;
 
-    window.location = redirectURL;
+      gtag("event", "begin_checkout", {
+        event_callback: () => {
+          window.location.href = redirectURL;
+        },
+      });
+    });
   };
 
   return (
