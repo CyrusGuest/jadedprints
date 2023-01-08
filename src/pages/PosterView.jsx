@@ -10,7 +10,7 @@ import DropdownArrow from "../images/DropdownArrow.svg";
 import AlbumCatalog from "../AlbumCatalog";
 
 const PosterView = () => {
-  const [size, setSize] = useState("20x30");
+  const [size, setSize] = useState("11x14");
   const [quantity, setQuantity] = useState(1);
   const [materials, setMaterials] = useState(false);
   const [shipping, setShipping] = useState(false);
@@ -66,7 +66,7 @@ const PosterView = () => {
           <h3 className="text-xl mt-3 font-light">JADED PRINTS'</h3>
           <h1 className="text-3xl font-bold">{album.title}</h1>
           <h3 className="text-lg font-light mt-1">
-            ${sizePrices[size]} USD tax not included
+            ${sizePrices[size]} USD + free shipping
           </h3>
 
           <div className="mt-4">
