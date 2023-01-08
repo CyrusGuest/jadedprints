@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="h-12 w-full bg-black text-white text-center font-bold text-xl">
+      <div className="h-12 w-full bg-black text-white text-center font-bold text-lg md:text-xl">
         <h1 className="mt-3">FREE SHIPPING ALL WEEK - ORDER NOW!</h1>
       </div>
       <div className="flex">
