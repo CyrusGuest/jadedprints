@@ -5,6 +5,10 @@ import ProductCard from "../components/ProductCard";
 import AlbumCatalog from "../AlbumCatalog";
 
 const Posters = () => {
+  let postersToBeRendered = AlbumCatalog.filter(
+    (poster) => poster.id !== 21 && poster.id !== 19 && poster.id !== 14
+  );
+
   return (
     <div>
       <h1 className="md:max-w-4xl md:mx-auto md:text-5xl text-4xl mt-10 font-bold text-center mx-4">
@@ -19,7 +23,10 @@ const Posters = () => {
 
       <div className="mx-10 mt-10 flex flex-col">
         <div className="flex flex-col gap-12 md:grid md:grid-cols-3">
-          {AlbumCatalog.map((poster) => (
+          <ProductCard albumCode={21} />
+          <ProductCard albumCode={19} />
+          <ProductCard albumCode={14} />
+          {postersToBeRendered.map((poster) => (
             <ProductCard albumCode={poster.id} />
           ))}
         </div>
