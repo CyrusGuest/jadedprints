@@ -129,8 +129,8 @@ const PosterView = () => {
           </button>
 
           <p className="text-lg font-light mt-8">
-            poster with design including the beauty behind the madness album
-            cover, tracklist, spotify link, and other information
+            poster with design including the {album.title} album cover,
+            tracklist, spotify link, and other information
           </p>
 
           <div className="mt-8">
