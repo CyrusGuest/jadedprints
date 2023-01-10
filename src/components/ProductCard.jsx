@@ -20,7 +20,7 @@ const ProductCard = ({ albumCode }) => {
     };
 
     loadImage();
-  }, []);
+  }, [album.images]);
 
   return (
     <div className="w-6/6 shadow-xl rounded-xl p-8 md:p-4 lg:p-8 mx-auto flex flex-col align-middle">
