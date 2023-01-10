@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import CartContext from "../context/CartContext";
 import { useParams, useNavigate } from "react-router-dom";
 import AlbumRequest from "../components/AlbumRequest";
@@ -16,8 +16,25 @@ const PosterView = () => {
   const [shipping, setShipping] = useState(false);
   const [dimensions, setDimensions] = useState(false);
   const [care, setCare] = useState(false);
+  const [albumCover, setAlbumCover] = useState("");
   const { id } = useParams();
   const navigate = useNavigate();
+
+  const album = AlbumCatalog[id];
+
+  useEffect(() => {
+    const loadImage = async () => {
+      const image = await import(
+        `../images/posters/${album.images}/${size} Poster.webp`
+      );
+
+      console.log(image);
+
+      setAlbumCover(image.default);
+    };
+
+    loadImage();
+  }, [album.images, size]);
 
   const { cart, setCart } = useContext(CartContext);
 
@@ -28,7 +45,6 @@ const PosterView = () => {
     "11x14": 23.99,
   };
 
-  const album = AlbumCatalog[id];
 
   const addPosterToCart = (e) => {
     e.preventDefault();
@@ -59,7 +75,7 @@ const PosterView = () => {
     <div>
       <div className="mx-10 md:flex md:mx-20 lg:mx-44 md:gap-10 md:mt-10">
         <div className="md:w-11/12">
-          <img className="shadow-lg" src={album.images[size]} alt="" />
+          <img className="shadow-lg" src={albumCover} alt="" />
         </div>
 
         <div className="md:max-w-md cursor-pointer">
