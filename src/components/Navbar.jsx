@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
       <div className="flex">
         {mobileNav ? <MobileNav setMobileNav={setMobileNav} /> : ""}
-        
+
         <div className="m-3 md:w-1/6">
           <Link to="/">
             <img
@@ -27,12 +27,12 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <ul className="justify-center w-5/6 hidden md:flex font-bold text-xl lg:text-2xl align-middle gap-6 mt-7">
-          <Link to="/">home</Link>
-          <Link to="posters">posters</Link>
-          <Link to="company">about us</Link>
-          <Link to="collections">collections</Link>
-          <Link to="company">contact us</Link>
+        <ul className="justify-center w-5/6 font-bold hidden md:flex text-xl lg:text-2xl align-middle gap-6 mt-7">
+          <Link to="/">HOME</Link>
+          <Link to="posters">POSTERS</Link>
+          <Link to="company">ABOUT US</Link>
+          <Link to="collections">COLLECTIONS</Link>
+          <Link to="company">CONTACT US</Link>
         </ul>
 
         <div className="md:w-1/12 md:max-h-10 lg:max-h-10 flex gap-5 justify-end md:mt-5 mr-5 md:mr-7">
@@ -50,7 +50,6 @@ const Navbar = () => {
           />
         </div>
       </div>
-
     </div>
   );
 };
