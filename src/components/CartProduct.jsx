@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import CartContext from "../context/CartContext";
 import AlbumCatalog from "../AlbumCatalog";
 
@@ -7,6 +7,22 @@ const CartProduct = ({ poster }) => {
   const [quantity, setQuantity] = useState(poster.quantity);
   const [editDetails, setEditDetails] = useState(false);
   const { cart, setCart } = useContext(CartContext);
+  const [albumCover, setAlbumCover] = useState("");
+  const album = AlbumCatalog[poster.id];
+
+  useEffect(() => {
+    const loadImage = async () => {
+      const image = await import(
+        `../images/posters/${album.images}/${size} Poster.webp`
+      );
+
+      console.log(image);
+
+      setAlbumCover(image.default);
+    };
+
+    loadImage();
+  }, [album.images, size]);
 
   const sizePrices = {
     "20x30": 32.99,
@@ -14,8 +30,6 @@ const CartProduct = ({ poster }) => {
     "12x18": 25.99,
     "11x14": 23.99,
   };
-
-  const album = AlbumCatalog[poster.id];
 
   const removeFromCart = () => {
     let newCart = cart;
@@ -62,7 +76,7 @@ const CartProduct = ({ poster }) => {
         </div>
 
         <h3 className="text-xl mt-3 font-light">JADED PRINTS'</h3>
-        <img className="shadow-lg w-1/2" src={album.images[size]} alt="" />
+        <img className="shadow-lg w-1/2" src={albumCover} alt="" />
         <h1 className="text-3xl font-bold mt-3">{poster.title}</h1>
         <h3 className="text-lg font-light mt-1">
           ${sizePrices[size]} USD tax not included
@@ -141,7 +155,7 @@ const CartProduct = ({ poster }) => {
       <h3 className="text-xl font-bold text-center md:text-base lg:text-xl">
         {album.title}
       </h3>
-      <img className="shadow-xl" src={album.images[size]} alt="" />
+      <img className="shadow-xl" src={albumCover} alt="" />
       <h2 className="text-center text-2xl font-light mt-3 lg:text-2xl">
         ${sizePrices[size]} + free shipping
       </h2>
