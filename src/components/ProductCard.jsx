@@ -14,8 +14,6 @@ const ProductCard = ({ albumCode }) => {
         `../images/posters/${album.images}/12x18 Poster.webp`
       );
 
-      console.log(image);
-
       setAlbumCover(image.default);
     };
 

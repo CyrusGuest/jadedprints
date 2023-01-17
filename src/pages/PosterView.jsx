@@ -24,10 +24,14 @@ const PosterView = () => {
   const album = AlbumCatalog[id];
 
   useEffect(() => {
-    gtag("event", "view_poster", {
-      poster: album.title,
+    gtag("get", "G-TTHC5CSW66", "client_id", async (clientID) => {
+      gtag("event", "view_poster", {
+        poster: album.title,
+      });
     });
+  }, [album.title]);
 
+  useEffect(() => {
     const loadImage = async () => {
       const image = await import(
         `../images/posters/${album.images}/${size} Poster.webp`
