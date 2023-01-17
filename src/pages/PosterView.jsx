@@ -8,6 +8,7 @@ import Dimensions from "../images/Dimensions.svg";
 import Care from "../images/Care.svg";
 import DropdownArrow from "../images/DropdownArrow.svg";
 import AlbumCatalog from "../AlbumCatalog";
+import gtag from "ga-gtag";
 
 const PosterView = () => {
   const [size, setSize] = useState("11x14");
@@ -23,6 +24,10 @@ const PosterView = () => {
   const album = AlbumCatalog[id];
 
   useEffect(() => {
+    gtag("event", "view_poster", {
+      poster: album.title,
+    });
+
     const loadImage = async () => {
       const image = await import(
         `../images/posters/${album.images}/${size} Poster.webp`
@@ -44,7 +49,6 @@ const PosterView = () => {
     "12x18": 25.99,
     "11x14": 23.99,
   };
-
 
   const addPosterToCart = (e) => {
     e.preventDefault();
