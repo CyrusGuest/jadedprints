@@ -39,7 +39,7 @@ const PosterView = () => {
     };
 
     loadImage();
-  }, [album.images, size]);
+  }, [album.images, size, album.title]);
 
   const { cart, setCart } = useContext(CartContext);
 
