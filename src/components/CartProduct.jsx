@@ -8,7 +8,14 @@ const CartProduct = ({ poster }) => {
   const [editDetails, setEditDetails] = useState(false);
   const { cart, setCart } = useContext(CartContext);
   const [albumCover, setAlbumCover] = useState("");
-  const album = AlbumCatalog[poster.id];
+  function getAlbumDetails(albumCode) {
+    const album = AlbumCatalog.find((album) => album.id === albumCode);
+    return album ? album : null;
+  }
+
+  const album = getAlbumDetails(parseInt(poster.id));
+
+  console.log(poster);
 
   useEffect(() => {
     const loadImage = async () => {
