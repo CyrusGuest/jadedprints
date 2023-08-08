@@ -5,8 +5,14 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Loading from "../images/Loading.webp";
 
 const ProductCard = ({ albumCode }) => {
-  const album = AlbumCatalog[albumCode];
+  function getAlbumDetails(albumCode) {
+    const album = AlbumCatalog.find((album) => album.id === albumCode);
+    return album ? album : null;
+  }
+
   const [albumCover, setAlbumCover] = useState("");
+
+  const album = getAlbumDetails(albumCode);
 
   useEffect(() => {
     const loadImage = async () => {

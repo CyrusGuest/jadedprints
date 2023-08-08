@@ -16,8 +16,8 @@ const Collections = () => {
 
         <div className="flex flex-col gap-16 md:gap-8 md:grid md:grid-cols-3 mt-10">
           <ProductCard albumCode={0} />
-          <ProductCard albumCode={5} />
-          <ProductCard albumCode={12} />
+          <ProductCard albumCode={19} />
+          <ProductCard albumCode={21} />
         </div>
 
         <h1 className="md:max-w-4xl md:mx-auto md:text-5xl text-4xl mt-32 font-bold text-center mx-4">
@@ -28,9 +28,9 @@ const Collections = () => {
         </p>
 
         <div className="flex flex-col gap-16 md:grid md:grid-cols-3 mt-10">
-          <ProductCard albumCode={20} />
+          <ProductCard albumCode={0} />
+          <ProductCard albumCode={19} />
           <ProductCard albumCode={21} />
-          <ProductCard albumCode={11} />
         </div>
       </div>
 
