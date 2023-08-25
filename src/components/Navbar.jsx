@@ -12,7 +12,9 @@ const Navbar = () => {
   return (
     <div className="flex flex-col">
       <div className="h-12 w-full bg-black text-white text-center font-bold text-lg md:text-xl">
-        <h1 className="mt-3">FREE SHIPPING ALL WEEK - ORDER NOW!</h1>
+        <h1 className="mt-3">
+          JADED PRINTS IS CLOSED INDEFINITELY. TRANSACTIONS HAVE BEEN DISABLED.
+        </h1>
       </div>
       <div className="flex">
         {mobileNav ? <MobileNav setMobileNav={setMobileNav} /> : ""}

@@ -9,7 +9,7 @@ const Cart = () => {
   const { cart } = useContext(CartContext);
 
   const handleCheckout = async () => {
-    const endpoint = "https://api.platepals.org/create-checkout-session";
+    const endpoint = "https://api.jadedprints.com/create-checkout-session";
 
     gtag("get", "G-TTHC5CSW66", "client_id", async (clientID) => {
       const response = await axios.post(endpoint, {
