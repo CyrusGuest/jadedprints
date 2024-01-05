@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import Logo from "../images/Logo.webp";
-import Bag from "../images/Bag.svg";
-import HamburgerMenu from "../images/HamburgerMenu.svg";
 import MobileNav from "./MobileNav";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -23,7 +20,7 @@ const Navbar = () => {
           <Link to="/">
             <img
               className="w-1/3 md:w-auto md:max-h-28"
-              src={Logo}
+              src="/images/Logo.webp"
               alt="Jaded Prints Logo"
             />
           </Link>
@@ -41,13 +38,13 @@ const Navbar = () => {
           <img
             onClick={() => navigate("cart")}
             className="w-10 md:w-8 lg:w-10 cursor-pointer"
-            src={Bag}
+            src="/images/Bag.svg"
             alt="Checkout Bag"
           />
           <img
             onClick={() => setMobileNav(!mobileNav)}
             className="w-10 cursor-pointer md:hidden"
-            src={HamburgerMenu}
+            src="/images/HamburgerMenu.svg"
             alt="Hamburger Menu"
           />
         </div>

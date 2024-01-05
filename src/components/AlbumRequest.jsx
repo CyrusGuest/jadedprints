@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import search from "../images/Search.svg";
 import axios from "axios";
 
 const AlbumRequest = () => {
@@ -47,7 +46,7 @@ const AlbumRequest = () => {
 
       <div className="flex flex-col md:gap-4 md:flex-row mt-10 md:mx-auto md:w-7/12 md:max-w-xl">
         <div className="flex mx-auto w-5/6 md:w-4/6 border-2 rounded-lg pl-3 h-16">
-          <img src={search} alt="" className="w-8" />
+          <img src="/images/Search.svg" alt="" className="w-8" />
           <input
             value={albumRequest}
             onChange={(e) => setAlbumRequest(e.target.value)}

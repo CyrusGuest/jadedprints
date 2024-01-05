@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import CartProduct from "../components/CartProduct";
 import CartContext from "../context/CartContext";
-import Checkout from "../images/Checkout.svg";
 import axios from "axios";
 import gtag from "ga-gtag";
 
@@ -9,7 +8,8 @@ const Cart = () => {
   const { cart } = useContext(CartContext);
 
   const handleCheckout = async () => {
-    const endpoint = "https://api.jadedprints.com/create-checkout-session";
+    const endpoint =
+      "https://5d679ps2ge.execute-api.us-east-1.amazonaws.com/create-checkout-session";
 
     gtag("get", "G-TTHC5CSW66", "client_id", async (clientID) => {
       const response = await axios.post(endpoint, {
@@ -44,7 +44,7 @@ const Cart = () => {
           onClick={() => handleCheckout()}
           className="bg-black font-bold text-xl mx-auto py-4 px-20 gap-3 mt-2 text-white flex rounded-lg"
         >
-          <img className="mt-1" src={Checkout} alt="" />
+          <img className="mt-1" src="/images/Checkout.svg" alt="" />
           checkout
         </button>
       ) : (

@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import EmailIcon from "../images/EmailIcon.svg";
-import Pinterest from "../images/Pinterest.svg";
-import Instagram from "../images/Instagram.svg";
-import Twitter from "../images/Twitter.svg";
-import Tiktok from "../images/Tiktok.svg";
 import axios from "axios";
 
 const Footer = () => {
@@ -61,7 +56,7 @@ const Footer = () => {
         ) : (
           <div>
             <div className="flex border-2 md:w-auto w-3/4 rounded-lg pl-4 py-3 mt-2">
-              <img src={EmailIcon} alt="" />
+              <img src="/images/EmailIcon.svg" alt="" />
               <input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -85,10 +80,13 @@ const Footer = () => {
       <div>
         <h3 className="font-bold text-2xl">socials</h3>
         <div className="flex gap-6 mt-2 md:gap-2">
-          <img className="w-10" src={Pinterest} alt="" />
-          <img src={Instagram} alt="https://www.instagram.com/jadedprints/" />
-          <img src={Twitter} alt="" />
-          <img src={Tiktok} alt="" />
+          <img className="w-10" src="/images/Pinterest.svg" alt="" />
+          <img
+            src="/images/Instagram.svg"
+            alt="https://www.instagram.com/jadedprints/"
+          />
+          <img src="/images/Twitter.svg" alt="" />
+          <img src="/images/Tiktok.svg" alt="" />
         </div>
       </div>
     </div>

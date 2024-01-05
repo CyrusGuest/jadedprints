@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import EmailIcon from "../images/EmailIcon.svg";
-import Subject from "../images/Subject.svg";
-import Paragraph from "../images/Paragraph.svg";
 import axios from "axios";
 
 const ContactForm = () => {
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const validEmail = new RegExp(
@@ -23,16 +20,21 @@ const ContactForm = () => {
       return;
     }
 
-    await axios.post("https://api.jadedprints.com/contact", { email, subject, message });
+    await axios.post("https://api.jadedprints.com/contact", {
+      email,
+      subject,
+      message,
+    });
 
     setSubmitted(true);
-  }
+  };
 
-  if (submitted) return (
-    <div className="flex flex-col mt-32">
-      <h3 className="mx-auto text-3xl font-bold">we got your message!</h3>
-    </div>
-  )
+  if (submitted)
+    return (
+      <div className="flex flex-col mt-32">
+        <h3 className="mx-auto text-3xl font-bold">we got your message!</h3>
+      </div>
+    );
 
   return (
     <div className="flex flex-col">
@@ -45,7 +47,7 @@ const ContactForm = () => {
       </p>
 
       <div className="flex border-2 w-2/3 max-w-lg rounded-lg pl-4 py-3 mt-10 mx-auto">
-        <img src={EmailIcon} alt="" />
+        <img src="/public/images/EmailIcon.svg" alt="" />
         <input
           className="bg-transparent ml-4 text-xl outline-none"
           placeholder="email address"
@@ -58,7 +60,7 @@ const ContactForm = () => {
       </div>
 
       <div className="flex border-2 w-2/3 max-w-lg rounded-lg pl-4 py-3 mt-4 mx-auto">
-        <img src={Subject} alt="" />
+        <img src="/images/Subject.svg" alt="" />
         <input
           className="bg-transparent ml-4 text-xl outline-none"
           placeholder="subject"
@@ -71,7 +73,7 @@ const ContactForm = () => {
       </div>
 
       <div className="flex relative border-2 w-2/3 max-w-lg rounded-lg pl-2 py-3 mt-4 mx-auto">
-        <img className="absolute" src={Paragraph} alt="" />
+        <img className="absolute" src="/images/Paragraph.svg" alt="" />
         <textarea
           className="w-full bg-transparent ml-12 mr-3 text-xl outline-none"
           placeholder="message"
@@ -83,7 +85,10 @@ const ContactForm = () => {
         />
       </div>
 
-      <button onClick={e => handleSubmit(e)} className="bg-black rounded-lg mt-4 text-white text-xl py-4 font-bold w-2/3 max-w-sm mx-auto">
+      <button
+        onClick={(e) => handleSubmit(e)}
+        className="bg-black rounded-lg mt-4 text-white text-xl py-4 font-bold w-2/3 max-w-sm mx-auto"
+      >
         send message
       </button>
     </div>

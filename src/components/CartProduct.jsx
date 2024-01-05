@@ -16,12 +16,12 @@ const CartProduct = ({ poster }) => {
   const album = getAlbumDetails(parseInt(poster.id));
 
   useEffect(() => {
-    const loadImage = async () => {
-      const image = await import(
-        `../images/posters/${album.images}/${size} Poster.webp`
-      );
+    const loadImage = () => {
+      // Construct the URL path to the image
+      const imageUrl = `/images/posters/${album.images}/${size} Poster.webp`;
 
-      setAlbumCover(image.default);
+      // Use this URL for your image source
+      setAlbumCover(imageUrl);
     };
 
     loadImage();

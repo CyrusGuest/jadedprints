@@ -2,11 +2,6 @@ import React, { useState, useContext, useEffect } from "react";
 import CartContext from "../context/CartContext";
 import { useParams, useNavigate } from "react-router-dom";
 import AlbumRequest from "../components/AlbumRequest";
-import Materials from "../images/Materials.svg";
-import Shipping from "../images/Shipping.svg";
-import Dimensions from "../images/Dimensions.svg";
-import Care from "../images/Care.svg";
-import DropdownArrow from "../images/DropdownArrow.svg";
 import AlbumCatalog from "../AlbumCatalog";
 import gtag from "ga-gtag";
 
@@ -24,6 +19,7 @@ const PosterView = () => {
   const album = AlbumCatalog[id];
 
   useEffect(() => {
+    // Update for Google Analytics
     gtag("get", "G-TTHC5CSW66", "client_id", async (clientID) => {
       gtag("event", "view_poster", {
         poster: album.title,
@@ -32,17 +28,9 @@ const PosterView = () => {
   }, [album.title]);
 
   useEffect(() => {
-    const loadImage = async () => {
-      const image = await import(
-        `../images/posters/${album.images}/${size} Poster.webp`
-      );
-
-      console.log(image);
-
-      setAlbumCover(image.default);
-    };
-
-    loadImage();
+    // Construct the URL path for the image
+    const imageUrl = `/images/posters/${album.images}/${size} Poster.webp`;
+    setAlbumCover(imageUrl);
   }, [album.images, size, album.title]);
 
   const { cart, setCart } = useContext(CartContext);
@@ -164,9 +152,13 @@ const PosterView = () => {
               className="my-3 flex flex-col"
             >
               <div className="flex">
-                <img className="w-8 h-6" src={Materials} alt="" />
+                <img className="w-8 h-6" src="/images/Materials.svg" alt="" />
                 <h3 className="text-xl font-light ml-4">materials</h3>
-                <img className="ml-auto mr-5" src={DropdownArrow} alt="" />
+                <img
+                  className="ml-auto mr-5"
+                  src="/images/DropdownArrow.svg"
+                  alt=""
+                />
               </div>
 
               {materials ? (
@@ -184,9 +176,13 @@ const PosterView = () => {
               className="my-3 flex flex-col"
             >
               <div className="flex">
-                <img className="w-8" src={Shipping} alt="" />
+                <img className="w-8" src="/images/Shipping.svg" alt="" />
                 <h3 className="text-xl font-light ml-4">shipping & returns</h3>
-                <img className="ml-auto mr-5" src={DropdownArrow} alt="" />
+                <img
+                  className="ml-auto mr-5"
+                  src="/images/DropdownArrow.svg"
+                  alt=""
+                />
               </div>
 
               {shipping ? (
@@ -205,9 +201,13 @@ const PosterView = () => {
               className="my-3 flex flex-col"
             >
               <div className="flex">
-                <img className="w-8" src={Dimensions} alt="" />
+                <img className="w-8" src="/images/Dimensions.svg" alt="" />
                 <h3 className="text-xl font-light ml-4">dimensions</h3>
-                <img className="ml-auto mr-5" src={DropdownArrow} alt="" />
+                <img
+                  className="ml-auto mr-5"
+                  src="/images/DropdownArrow.svg"
+                  alt=""
+                />
               </div>
 
               {dimensions ? (
@@ -223,9 +223,13 @@ const PosterView = () => {
             <hr className="border-neutral-400" />
             <div onClick={() => setCare(!care)} className="my-3 flex flex-col">
               <div className="flex">
-                <img className="w-8" src={Care} alt="" />
+                <img className="w-8" src="" alt="" />
                 <h3 className="text-xl font-light ml-4">care instructions</h3>
-                <img className="ml-auto mr-5" src={DropdownArrow} alt="" />
+                <img
+                  className="ml-auto mr-5"
+                  src="/images/DropdownArrow.svg"
+                  alt=""
+                />
               </div>
 
               {care ? (

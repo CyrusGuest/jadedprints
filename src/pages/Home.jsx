@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import PosterSearch from "../components/PosterSearch";
 import ProductCard from "../components/ProductCard";
 import AlbumRequest from "../components/AlbumRequest";
-import DesignSS from "../images/Design.webp";
-import Reviewer from "../images/Reviewer.webp";
 
 const Home = () => {
   return (
@@ -25,13 +23,13 @@ const Home = () => {
       <div className="mx-auto w-3/4 md:relative">
         <img
           className="z-0 w-full md:w-3/4 max-w-4xl md:float-right mt-20"
-          src={DesignSS}
+          src="/images/Design.webp"
           alt=""
         />
         <div className="z-10 w-7/12 md:max-w-md md:flex bg-white shadow-lg rounded-lg pt-4 md:pt-0 md:left-10 md:top-32 absolute left-20 top-[700px]">
           <img
             className="mx-auto w-14 md:w-full rounded-full md:rounded-none"
-            src={Reviewer}
+            src="/images/Reviewer.webp"
             alt=""
           />
           <div className="flex flex-col md:mt-2">

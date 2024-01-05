@@ -1,20 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Arrow from "../images/Arrow.svg";
-import HamburgerMenu from "../images/WhiteHamburgerMenu.svg";
 
 const MobileNav = ({ setMobileNav }) => {
   return (
     <div className="fixed z-20 w-3/4 h-full bg-black right-0">
       <div className="flex mt-5">
         <img
-          src={Arrow}
+          src="/images/Arrow.svg"
           onClick={() => setMobileNav(false)}
           alt=""
           className="cursor-pointer w-8 ml-6"
         />
         <img
-          src={HamburgerMenu}
+          src="/images/WhiteHamburgerMenu.svg"
           onClick={() => setMobileNav(false)}
           alt=""
           className="cursor-pointer ml-auto mr-4"
