@@ -8,10 +8,10 @@ const Cart = () => {
   const { cart } = useContext(CartContext);
 
   const handleCheckout = async () => {
-    const endpoint =
-      "https://5d679ps2ge.execute-api.us-east-1.amazonaws.com/create-checkout-session";
+    const endpoint = "https://api.jadedprints.com/create-checkout-session";
 
     gtag("get", "G-TTHC5CSW66", "client_id", async (clientID) => {
+      console.log({ cart, analyticsClientID: clientID });
       const response = await axios.post(endpoint, {
         cart,
         analyticsClientID: clientID,
