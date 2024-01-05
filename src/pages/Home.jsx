@@ -53,9 +53,9 @@ const Home = () => {
         </p>
 
         <div className="flex flex-col gap-10 md:flex-row mx-8">
-          <ProductCard albumCode={0} />
-          <ProductCard albumCode={19} />
-          <ProductCard albumCode={21} />
+          <ProductCard albumCode={18} />
+          <ProductCard albumCode={7} />
+          <ProductCard albumCode={2} />
         </div>
       </div>
 
