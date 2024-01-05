@@ -17,7 +17,7 @@ const Cart = () => {
         analyticsClientID: clientID,
       });
 
-      const redirectURL = response.data;
+      const redirectURL = response.data.url;
 
       gtag("event", "begin_checkout", {
         event_callback: () => {
